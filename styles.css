@@ -1,0 +1,96 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(99,220,203,1);
+}
+#container {
+	height: 100%;
+	width: 100%;
+	padding-top: 3vw;
+}
+#outer {
+	height: 250px;
+	background-color: rgba(55,55,55,0.5);
+}
+div#clock {
+	font-size: 200px;
+	letter-spacing: 20px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	color: rgba(253,221,113,1);
+}
+#setting {
+	display: inline-block;
+	width: 100%;
+	padding-top: 2vw;
+}
+.button, .set {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+.button > p, .set > p {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 32px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	color: rgba(54,36,118,1);
+}
+.button > p {
+    background-color: rgba(237,78,127,1);
+    width: 300px;
+    display: inline-block;
+    border-radius: 10px;
+
+}
+.button > p:hover {
+	background-color: rgba(173,57,93,1);
+	border-radius: 10px;
+}
+.button:hover, .set:hover {
+	cursor: pointer;
+}
+.input-field {
+	width: 100%;
+	text-align: center;
+    clear: both;
+}
+.input-field > p {
+	display: inline;
+	color: rgba(131,77,216,1);
+}
+input {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: rgba(239,126,158,1);
+	width: 35px;
+}
+#custom > p {
+	background-color: rgba(243,149,88,1);
+	border-radius: 0;
+}
+#custom > p:hover {
+	background-color: rgba(179,110,65,1);
+	border-radius: 0;
+}
+footer {
+	position: fixed;
+	letter-spacing: 10px;
+	bottom: 0;
+	right: 0;
+}
+footer > div {
+	color: rgba(250,248,251,1);
+}
