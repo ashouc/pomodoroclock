@@ -3,7 +3,7 @@ $(document).ready(prepTimer);
 var clock;
 
 function prepTimer() {
-	var indicator = false; //Follows if countdown was triggered
+	var indicator = false; //Follows if countdown is triggered
 	var defaultTime = 25; 
 	var breakTime = 5; 
 	var customHour = 0;
@@ -11,10 +11,12 @@ function prepTimer() {
 	var customSec = 0;
 	var defaultMin = parseInt(defaultTime); 
 	var defaultSec = "0" + 0;
+	
 	$("#clock").html(defaultMin + ":" + defaultSec);
 	var timeLeft; var seconds = 0; var minutes = 0;
 
-	$("#start").on('click', function(event) {
+	// onStart
+	$("#start").on('click', function() {
 		if(indicator) {
 			timeLeft = $("#clock")["0"].innerHTML;
 			seconds = parseInt(timeLeft.slice(timeLeft.length-2,timeLeft.length));
@@ -42,7 +44,8 @@ function prepTimer() {
 		}
 	});
 
-	$("#reset").on('click', function(event) {
+	// onReset
+	$("#reset").on('click', function() {
 		$("#start p").html('start');
 		clearInterval(clock);
 		$("#clock").html(defaultMin + ":" + defaultSec);
@@ -54,7 +57,8 @@ function prepTimer() {
 		indicator = false;	
 	});
 
-	$("#break").on('click', function(event) {
+	// onBreak
+	$("#break").on('click', function() {
 		if(indicator) {
 			$("#break p").html('start break');
 			clearInterval(clock);
@@ -70,7 +74,8 @@ function prepTimer() {
 		}
 	});
 
-	$("#custom").on('click', function(event) {
+	// onCustom
+	$("#custom").on('click', function() {
 		customHour = $('input')["0"].value;	customMin = $('input')[1].value; customSec = $('input')[2].value;
 		if(customSec === "") { customSec = 0;}
 		if(customMin === "") { customMin = 0;}
